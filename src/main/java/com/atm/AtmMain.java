@@ -53,6 +53,12 @@ public class AtmMain {
  				System.exit(0);
  			break;
 		default:
+				/* add acustom exception InvalidChoiceException*/
+					try{
+						throw new InvalidChoiceException("enter currect choice");
+					}catch(InvalidChoiceException e){
+						e.printStackTrace();
+					}
 			break;
 		}
 		}
