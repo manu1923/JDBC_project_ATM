@@ -244,6 +244,12 @@ public class AtmImplementation implements IAtm{
 				}
 				break;
 			default:
+					/* add acustom exception InvalidChoiceException*/
+					try{
+						throw new InvalidChoiceException("enter currect choice");
+					}catch(InvalidChoiceException e){
+						e.printStackTrace();
+					}
 				break;
 			}
 			connection.close();
